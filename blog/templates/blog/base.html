@@ -11,8 +11,11 @@
         <body>
             <header class="page-header">
               <div class="container">
-                  <h1><a href="/">WELCOME TO MY WEBSITE</a></h1>
-                  <p>How did <em>you</em> get here?</p>
+                <a href="{% url 'post_new' %}" class="top-menu">
+                    {% include './icons/file-earmark-plus.svg' %}
+                </a>
+                <h1><a href="/">WELCOME TO MY WEBSITE</a></h1>
+                <p>How did <em>you</em> get here?</p>
                 <p>Since you're here, click this: <a href="https://www.youtube.com/watch?v=N9TeBSWl8L4&t=295s">link</a> </p>
               </div>
             </header>
