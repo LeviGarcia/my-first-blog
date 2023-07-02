@@ -12,7 +12,12 @@
     <p>Since you're here, click this: <a href="https://www.youtube.com/watch?v=N9TeBSWl8L4&t=295s">link</a> </p>
     
 {% for post in posts %}
-    <article>
+<article>
+    <time>published: {{ post.published_date }}</time>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+</article>
+{% endfor %}
             <time>published: 7.1.2023, 6:52</time>
             <h2><a href="">Recent Updates:</a></h2>
             <p>------------------------------------------------------------------------</p>
@@ -21,9 +26,8 @@
             <p>------------------------------------------------------------------------</p>
         
     </article>
-{% endfor %}
-
-    <article>
+    
+    
         <time>published: 07.01.2023, 7:04</time>
         <h2><a href="">Music Recommendations:</a></h2>
         <ul><li>Led Zeppelin</li><li>Belmont</li><li>Young Thug</li></ul>
