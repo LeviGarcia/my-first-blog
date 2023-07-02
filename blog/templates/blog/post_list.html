@@ -11,14 +11,17 @@
     <p>How did <em>you</em> get here?</p>
     <p>Since you're here, click this: <a href="https://www.youtube.com/watch?v=N9TeBSWl8L4&t=295s">link</a> </p>
     
-    <article>
-        <time>published: 7.1.2023, 6:52</time>
-        <h2><a href="">Recent Updates:</a></h2>
-        <p>------------------------------------------------------------------------</p>
-        <p><strong>WEBSITE UNDER CONSTRUCTION</strong>
-            - Levi (admin)</p>
-        <p>------------------------------------------------------------------------</p>
-    </article>
+    {% for post in posts %}
+        <artcle>
+            <time>published: 7.1.2023, 6:52</time>
+            <h2><a href="">Recent Updates:</a></h2>
+            <p>------------------------------------------------------------------------</p>
+            <p><strong>WEBSITE UNDER CONSTRUCTION</strong>
+                - Levi (admin)</p>
+            <p>------------------------------------------------------------------------</p>
+        
+        </article>
+    {% endfor %}
 
     <article>
         <time>published: 07.01.2023, 7:04</time>
