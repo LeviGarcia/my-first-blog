@@ -1,40 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Levi's Website</title>
-    </head>
-<body>
-    <header>
-        <h1>WELCOME TO MY WEBSITE</h1>
-    </header>
-    <h2>_____________________________________</h2>
-    <p>How did <em>you</em> get here?</p>
-    <p>Since you're here, click this: <a href="https://www.youtube.com/watch?v=N9TeBSWl8L4&t=295s">link</a> </p>
-    
-{% for post in posts %}
-<article>
-    <h2><a href="">{{ post.title }}</a></h2>
-    <p>{{ post.text|linebreaksbr }}</p>
-    <time>published: {{ post.published_date }}</time>
-</article>
-{% endfor %}
+{% extends 'blog/base.html' %}
 
-            <h2><a href="">Recent Updates:</a></h2>
-            <p>------------------------------------------------------------------------</p>
-            <h2><strong>WEBSITE UNDER CONSTRUCTION</strong>
-                - Levi (admin)</h2>
-            <p>------------------------------------------------------------------------</p>
-        
-    </article>
-    
-    
-        
-        <h2><a href="">Music Recommendations:</a></h2>
-        <ul><li>Led Zeppelin</li><li>Belmont</li><li>Young Thug</li></ul>
-    </article>
-    
-    <header>
-        <h2><a href="/">HOME</a></h2>
-    </header>
-</body>
-</html>
+{% block content %}
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}
