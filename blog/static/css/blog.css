@@ -1,12 +1,13 @@
 h1 a, h2 a {
-    color: limegreen;
+    color: purple;
     font-family: "Courier New", monospace;
 }
 body {
     padding-left: 0px;;
+    background-color: black;
 }
 .page-header {
-    background-color: #020008;
+    background-color: black;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -17,19 +18,21 @@ body {
 .page-header h1 a:visited,
 .page-header h1 a:active {
     color: #ffffff;
-    font-size: 50pt;
-    text-decoration: none;
+    font-size: 92pt;
+    text-decoration: underline; 
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
     font-family: "Courier New", monospace;
+    color: white;
 }
 
 .date {
-    color: #080000;
+    color: purple;
 }
 
 .save {
@@ -56,7 +59,7 @@ h4 {
 
 .post h2 a,
 .post h2 a:visited {
-    color: black;
+    color: purple;
 }
 
 .post > .date,
