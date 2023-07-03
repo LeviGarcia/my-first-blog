@@ -69,12 +69,12 @@ p {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #00f732;
+    color: purple;
     background: none;
-    border-color: lime;
+    border-color: purple;
 }
 
 .btn-secondary:hover {
-    color: lime;
-    background-color: lime;
+    color: purple;
+    background-color: purple;
 }
